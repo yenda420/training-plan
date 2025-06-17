@@ -54,7 +54,7 @@ To set up and run the application, you will need a web server (e.g., Apache, Ngi
     * Create a database (e.g., `training_app`).
     * Import the database schema and initial data (including exercises) from the `training_plan.sql` file into your MySQL database. (You'll need to locate the exact SQL file name from your project structure).
 4.  **Database Connection:**
-    * Configure the database connection details (hostname, username, password, database name) within the relevant PHP files of the application.
+    * Configure the database connection details (hostname, username, password, database name) within the `db_connect.php` file.
 5.  **Access the Application:**
     * Open your web browser and navigate to the URL where the application is deployed.
 
@@ -64,4 +64,4 @@ Simple project documentation (in Czech) is available within the `web_info` direc
 
 ## Development Reflections
 
-This project marks a significant milestone as my first extensive solo web development endeavor. While the procedural PHP code and basic file structure reflect my early learning phase from approximately two years ago, it successfully delivers a functional and visually intuitive user experience. I've gained considerable knowledge and experience since then, and would undoubtedly architect and implement such a project with a much more refined and professional approach today. This application, therefore, stands as a clear illustration of my foundational skill development in web programming.
+This project marks a significant milestone as my first web development endeavor. While the procedural PHP code and basic file structure reflect my early learning phase from a couple of years ago, it successfully delivers a functional and visually intuitive user experience. I've gained considerable knowledge and experience since then, and would undoubtedly architect and implement such a project with a much more refined and professional approach today. This application, therefore, stands as a clear illustration of my foundational skill development in web programming.
