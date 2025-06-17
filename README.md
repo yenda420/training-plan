@@ -43,8 +43,8 @@ To set up and run the application, you will need a web server (e.g., Apache, Ngi
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [repository_url]
-    cd [project_directory]
+    git clone https://github.com/yenda420/training-plan.git
+    cd training-plan
     ```
 2.  **Web Server & PHP:**
     * Deploy the project files to your web server's document root.
@@ -52,7 +52,7 @@ To set up and run the application, you will need a web server (e.g., Apache, Ngi
 3.  **Database Setup:**
     * Ensure a MySQL server is running.
     * Create a database (e.g., `training_app`).
-    * Import the database schema and initial data (including exercises) from the `[your_sql_file_name].sql` file into your MySQL database. (You'll need to locate the exact SQL file name from your project structure).
+    * Import the database schema and initial data (including exercises) from the `training_plan.sql` file into your MySQL database. (You'll need to locate the exact SQL file name from your project structure).
 4.  **Database Connection:**
     * Configure the database connection details (hostname, username, password, database name) within the relevant PHP files of the application.
 5.  **Access the Application:**
