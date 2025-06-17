@@ -1,6 +1,6 @@
 # Training Plan Generator (Web Application)
 
-This project is a web application developed as my final assignment for the 2nd-year web applications course. It was my first extensive solo project, built using HTML, CSS, JavaScript, and purely procedural PHP, with a MySQL database backend.
+This project is a web application developed as my final assignment for the 2nd-year web applications course. It was my first extensive project, built using HTML, CSS, JavaScript, and purely procedural PHP, with a MySQL database backend.
 
 It's important to note that this application was developed a considerable time ago. While the codebase reflects an early stage in my programming journey, with minimal adherence to professional standards in terms of file structure and code organization, the application remains visually appealing and intuitive for the end-user. It serves as a valuable demonstration of my early development progress and learning curve.
 
