@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="<?= $CSSpath ?>">
+        <title>Tréninkový plán<?= $title ?></title>
+    </head>
+
+    <body>
+        <div class="user">
+            <nav>
+                <ul>
+                    <li><a href="main.php">Tréninkový plán</a></li>
+                    <li><a href="exercises.php">Seznam cviků</a></li>
+                </ul>
+        
+                <img src="<?= $imgDir . "/" . $_SESSION["user"]["nazevObrazku"] ?>" class="user-pic" onclick="toggleMenu()" alt="Otevřít menu">
+        
+                <div class="sub-menu-wrap" id="subMenu">
+                    <div class="sub-menu">
+                        <div class="user-info">
+                            <img src="<?= $imgDir . "/" . $_SESSION["user"]["nazevObrazku"] ?>" class="random-class" alt="Profilový obrázek">
+                            <h3><?= $_SESSION["user"]["uzivJmeno"] ?></h3>
+                        </div>
+                        <hr>
+        
+                        <a href="settings.php" class="sub-menu-link">
+                            <img src="img/profile.png" class="random-class" alt="Nastavení">
+                            <p>Upravit profil</p>
+                            <span>></span>
+                        </a>
+
+                        <a href="logout.php" class="sub-menu-link">
+                            <img src="img/logout.png" class="random-class" alt="Odhlášení">
+                            <p>Odhlásit se</p>
+                            <span>></span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+
+            <script>
+                let subMenu = document.getElementById("subMenu")
+
+                function toggleMenu() {
+                    subMenu.classList.toggle("open-menu")
+                }
+            </script>
+        </div>

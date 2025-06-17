@@ -1,0 +1,51 @@
+<div class="box">
+    <div class="container">
+        <form method="post" onsubmit="return confirmDeletingUser()">
+            <div class="input-field">
+                <input type="submit" class="delete-account" name="delete-account" value="Smazat účet">
+            </div>
+        </form>
+
+        <form method="post" enctype="multipart/form-data">
+            <div class="main-profile-pic-div">
+                <div class="profile-pic-div-wrapper">
+                    <div class="profile-pic-div">
+                        <img src="<?= $imgDir . "/" . $_SESSION["user"]["nazevObrazku"] ?>" class="photo" alt="Profilový obrázek">
+                        <input type="file" class="file" id="file" name="profile-pic" accept="<?= implode(",", $allowedTypes) ?>">
+                        <label for="file" class="upload-button">Změnit profilovku</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-field">
+                <input type="text" class="input" name="new-username" placeholder="Nové uživatelské jméno">
+            </div>
+
+            <div class="input-field">
+                <input type="password" class="input" name="new-password" placeholder="Nové heslo">
+            </div>
+
+            <div class="input-field">
+                <input type="password" class="input" name="new-password-again" placeholder="Nové heslo znovu">
+            </div>
+
+            <div class="input-field">
+                <input type="password" class="input" name="old-password" placeholder="Staré heslo">
+            </div>
+
+            <div class="input-field input-submit">
+                <input type="submit" class="submit" value="Uložit změny">
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="javascript/settings.js"></script>
+
+<div class="return-box">
+    <div class="return-container">
+        <div class="return-back">
+            <span><a href="main.php">Zpět na hlavní stránku</a></span>
+        </div>
+    </div>
+</div>

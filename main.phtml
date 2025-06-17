@@ -1,0 +1,72 @@
+<h1>Tréninkový plán</h1>
+
+<h2>Tvůj split</h2>
+<section class="split">
+    <ul>
+        <?= echoSplit($_SESSION["user"]["pocTreninku"]) ?>
+    </ul>
+</section>
+
+<?php
+foreach ($usersWorkouts as $usersWorkout) {
+
+    $workouts = returnWorkoutHeader($dbConnect, $usersWorkout["ID_T"]);
+
+    foreach ($workouts as $workout) { ?>
+        <h2 id="<?= $workout['ID_T'] ?>"> <?= $workout['nazev_t'] ?></h2>
+    <?php } ?>
+
+    <section class="workout">
+        <div class="workout-container">
+            <div class="rows">
+
+                <?php $exercises = returnExercises($dbConnect, $usersWorkout["ID_T"]); 
+
+                foreach ($exercises as $exercise) { ?>
+
+                    <div class="exercise-col">
+                        <h4><?= $exercise["nazev_c"] ?></h4>
+                        <ul>
+                            <li>Série: <?= $exercise["serie"] ?></li>
+                            <li>Opakování: <?= $exercise["opakovani"] ?></li>
+                            <li>Příklad váhy: <?= $exercise["vaha"] ?></li>
+                            <li>Pauzy: <?= $exercise["pauzy"] ?></li>
+                        </ul>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+
+        <span class="disclaimer">* opakování, příklad váhy a pauzy jsou pouze orientační a budou pro každého individuální</span>
+    </section>
+<?php } ?>
+
+<h2 id="rest">Rest day</h2>
+<section class="workout">
+    <div class="workout-container">
+        <div class="rows">
+            <div class="exercise-col">
+                <h4>Spánek</h4>
+                <ul>
+                    <li>7-9 hodin každý den</li>
+                </ul>
+            </div>
+
+            <div class="exercise-col">
+                <h4>Jídlo</h4>
+                <ul>
+                    <li>5x denně do selhání</li>
+                </ul>
+            </div>
+
+            <div class="exercise-col">
+                <h4>Jinak nic</h4>
+                <ul>
+                    <li>Rest day je nuda</li>
+                    <li>Běž do gymu</li>
+                    <li>Dělej</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,43 @@
+<h1>Seznam cviků</h1>
+
+<?php
+    if (isset($_POST["muscle-group"]) && $_POST["muscle-group"] != 0) { ?>
+        <h2>Cviky na <?= returnMuscleGroup($dbConnect, $_POST["muscle-group"]) ?></h2>
+<?php } ?>
+
+<form method="post">
+    <div class="choose">
+        <div class="select">
+            <select name="muscle-group" required>
+                <option selected value="">--- Vyber svalovou partii ---</option>
+
+                <?php foreach ($muscleGroups as $muscleGroup) { ?>
+                    <option value="<?= $muscleGroup["ID_S"] ?>"><?= $muscleGroup["nazev_s"] ?></option>
+                <?php } ?>
+            </select>
+        </div>
+        
+        <div class="submit">
+            <input type="submit" value="Najít">
+        </div>
+    </div>
+</form>
+
+<section class="workout">
+    <div class="workout-container">
+        <div class="rows">
+
+            <?php foreach ($exercises as $exercise) { ?>
+                <div class="exercise-col">
+                    <h4><?= $exercise["nazev_c"] ?></h4>
+                    <ul>
+                        <li>Série: <?= $exercise["serie"] ?></li>
+                        <li>Opakování: <?= $exercise["opakovani"] ?></li>
+                        <li>Váha: <?= $exercise["vaha"] ?></li>
+                        <li>Pauzy: <?= $exercise["pauzy"] ?></li>
+                    </ul>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+</section>

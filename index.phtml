@@ -1,0 +1,74 @@
+<div class="box">
+    <div class="container">
+        <div class="top-header">
+            <span><a href="login.php" class="register">Máte založený ůčet?</a></span>
+            <span><a href="main_no_login.php" class="continue">Pokračovat nepřihlášený</a></span>
+
+            <header>Založit účet</header>
+        </div>
+
+        <form method="post">
+            <div class="input-field">
+                <input type="text" class="input" name="login" placeholder="Uživatelské jméno" required>
+            </div>
+
+            <div class="input-field">
+                <input type="password" class="input" name="password" placeholder="Heslo" required>
+            </div>
+
+            <div class="input-field">
+                <input type="password" class="input" name="passwordAgain" placeholder="Heslo znovu" required>
+            </div>
+
+            <div>
+                <label class="label-form">Cvičit chci:</label>
+                <div class="input-radio"> 
+                    <div class="left-radio">
+                        <div class="input">
+                            <input type="radio" name="pocet" id="1" value="1" required>
+                            <label for="1">1x týdně</label>
+                        </div>
+
+                        <div class="input">
+                            <input type="radio" name="pocet" id="2" value="2">
+                            <label for="2">2x týdně</label>
+                        </div>
+
+                        <div class="input">
+                            <input type="radio" name="pocet" id="3" value="3">
+                            <label for="3">3x týdně</label>
+                        </div>
+                    </div>
+                    
+                    <div class="right-radio">
+                        <div class="input">
+                            <input type="radio" name="pocet" id="4" value="4">
+                            <label for="4">4x týdně</label>
+                        </div>
+
+                        <div class="input">
+                            <input type="radio" name="pocet" id="5" value="5">
+                            <label for="5">5x týdně</label>
+                        </div>
+
+                        <div class="input">
+                            <input type="radio" name="pocet" id="6" value="6">
+                            <label for="6">6x týdně</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-field">
+                <input type="submit" class="submit" value="Vytvořit účet">
+            </div>
+
+            <div class="bottom">
+                <div class="left">
+                    <input type="checkbox" id="check" name="checkbox">
+                    <label for="check">Zapamatovat přihlašovací údaje</label>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
